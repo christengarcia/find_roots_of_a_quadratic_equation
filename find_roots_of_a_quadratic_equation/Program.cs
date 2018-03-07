@@ -67,4 +67,14 @@ namespace find_roots_of_a_quadratic_equation
             }
         }
     }
+
+    class Roots
+    {
+        public static void Main()
+        {
+            Quadraticroots qr = new Quadraticroots();
+            qr.read();
+            qr.Compute();
+        }
+    }
 }
