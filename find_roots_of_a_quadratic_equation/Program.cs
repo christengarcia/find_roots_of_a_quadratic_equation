@@ -34,6 +34,37 @@ namespace find_roots_of_a_quadratic_equation
                 m = 3;
             else
                 m = 4;
+
+            switch (m)
+            {
+                case 1:
+                    Console.WriteLine("\n Not a Quadratic equation, Linear equation");
+                    Console.ReadLine();
+                    break;
+                case 2:
+                    Console.WriteLine("\n Roots are Real and Distinct");
+                    r1 = (-b + Math.Sqrt(d1)) / (2 * a);
+                    r2 = (-b - Math.Sqrt(d1)) / (2 * a);
+                    Console.WriteLine("\n First root is {0:#.##}", r1);
+                    Console.WriteLine("\n Second root is {0:#.##}", r2);
+                    Console.ReadLine();
+                    break;
+                case 3:
+                    Console.WriteLine("\n Roots are Real and Equal");
+                    r1 = r2 = (-b) / (2 * a);
+                    Console.WriteLine("\n First root is {0:#.##}", r1);
+                    Console.WriteLine("\n Second root is {0:#.##}", r2);
+                    Console.ReadLine();
+                    break;
+                case 4:
+                    Console.WriteLine("\n Roots are Imaginary");
+                    r1 = (-b) / (2 * a);
+                    r2 = Math.Sqrt(-d1) / (2 * a);
+                    Console.WriteLine("\n First root is {0:#.##} + i {1:#.##}", r1, r2);
+                    Console.WriteLine("\n Second root is {0:#.##} - i {1:#.##}", r1, r2);
+                    Console.ReadLine();
+                    break;
+            }
         }
     }
 }
